@@ -14,6 +14,8 @@
 		79E1780A1F8F40760036EF84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E178081F8F40760036EF84 /* LaunchScreen.storyboard */; };
 		79E178151F8F40760036EF84 /* SimpleStackImplementationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E178141F8F40760036EF84 /* SimpleStackImplementationTests.swift */; };
 		79E178201F8F40770036EF84 /* SimpleStackImplementationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1781F1F8F40770036EF84 /* SimpleStackImplementationUITests.swift */; };
+		79E1782E1F8F40870036EF84 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1782D1F8F40870036EF84 /* Node.swift */; };
+		79E178301F8F40DB0036EF84 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1782F1F8F40DB0036EF84 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		79E1781B1F8F40770036EF84 /* SimpleStackImplementationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleStackImplementationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E1781F1F8F40770036EF84 /* SimpleStackImplementationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStackImplementationUITests.swift; sourceTree = "<group>"; };
 		79E178211F8F40770036EF84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79E1782D1F8F40870036EF84 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		79E1782F1F8F40DB0036EF84 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				79E178061F8F40760036EF84 /* Assets.xcassets */,
 				79E178081F8F40760036EF84 /* LaunchScreen.storyboard */,
 				79E1780B1F8F40760036EF84 /* Info.plist */,
+				79E1782D1F8F40870036EF84 /* Node.swift */,
+				79E1782F1F8F40DB0036EF84 /* Stack.swift */,
 			);
 			path = SimpleStackImplementation;
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E178301F8F40DB0036EF84 /* Stack.swift in Sources */,
+				79E1782E1F8F40870036EF84 /* Node.swift in Sources */,
 				79E178021F8F40760036EF84 /* ViewController.swift in Sources */,
 				79E178001F8F40760036EF84 /* AppDelegate.swift in Sources */,
 			);

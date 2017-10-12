@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleStackImplementation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter value to push to the stack" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPh-pJ-ky6">
+                                <rect key="frame" x="20" y="28" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syJ-Su-FKf">
+                                <rect key="frame" x="20" y="66" width="335" height="30"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DU0-zd-iUC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popped field" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVs-bh-Fbz">
+                                <rect key="frame" x="20" y="104" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToU-aW-tDi">
+                                <rect key="frame" x="20" y="133" width="335" height="30"/>
+                                <state key="normal" title="Pop"/>
+                                <connections>
+                                    <action selector="pop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sb7-be-G3N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stack items" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTp-Mj-xoP">
+                                <rect key="frame" x="20" y="171" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CPh-pJ-ky6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="1sB-W8-NtT"/>
+                            <constraint firstItem="CTp-Mj-xoP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="4Hz-9X-ZPH"/>
+                            <constraint firstItem="DVs-bh-Fbz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="7Wz-EH-mwh"/>
+                            <constraint firstItem="syJ-Su-FKf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="AqZ-7h-Arb"/>
+                            <constraint firstItem="DVs-bh-Fbz" firstAttribute="top" secondItem="syJ-Su-FKf" secondAttribute="bottom" constant="8" symbolic="YES" id="BCR-Nq-GqQ"/>
+                            <constraint firstAttribute="trailing" secondItem="CPh-pJ-ky6" secondAttribute="trailing" constant="20" symbolic="YES" id="Vy6-Kt-qq5"/>
+                            <constraint firstItem="ToU-aW-tDi" firstAttribute="top" secondItem="DVs-bh-Fbz" secondAttribute="bottom" constant="8" symbolic="YES" id="bmX-zc-22c"/>
+                            <constraint firstAttribute="trailing" secondItem="ToU-aW-tDi" secondAttribute="trailing" constant="20" symbolic="YES" id="csI-Mz-oyD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CTp-Mj-xoP" secondAttribute="bottom" priority="250" constant="8" symbolic="YES" id="fr4-Dw-SkM"/>
+                            <constraint firstAttribute="trailing" secondItem="CTp-Mj-xoP" secondAttribute="trailing" constant="20" symbolic="YES" id="gKq-yb-f8I"/>
+                            <constraint firstItem="CPh-pJ-ky6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="nFg-0K-e3M"/>
+                            <constraint firstItem="CTp-Mj-xoP" firstAttribute="top" secondItem="ToU-aW-tDi" secondAttribute="bottom" constant="8" symbolic="YES" id="okq-Yf-V3c"/>
+                            <constraint firstAttribute="trailing" secondItem="DVs-bh-Fbz" secondAttribute="trailing" constant="20" symbolic="YES" id="vfn-bQ-IWh"/>
+                            <constraint firstItem="syJ-Su-FKf" firstAttribute="top" secondItem="CPh-pJ-ky6" secondAttribute="bottom" constant="8" symbolic="YES" id="vgw-1I-sUS"/>
+                            <constraint firstItem="ToU-aW-tDi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="vuk-Uh-lF3"/>
+                            <constraint firstAttribute="trailing" secondItem="syJ-Su-FKf" secondAttribute="trailing" constant="20" symbolic="YES" id="yM5-i1-HMh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stackItemsLabel" destination="CTp-Mj-xoP" id="Xq8-8f-5Xk"/>
+                        <outlet property="valuePoppedLabel" destination="DVs-bh-Fbz" id="TlZ-Tm-K6n"/>
+                        <outlet property="valuePushedTextField" destination="CPh-pJ-ky6" id="wEN-zA-fiB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
